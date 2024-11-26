@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 z-50 transition-all duration-300 ${isScrolled ? 'bg-primary text-white shadow-lg' : ''}`}>
+      <div className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 z-50 transition-all duration-300 ${isScrolled ? 'bg-primary text-white shadow-lg' : 'bg-transparent'}`}>
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
