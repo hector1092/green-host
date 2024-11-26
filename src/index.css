@@ -25,6 +25,18 @@
     z-index: -1;
     object-fit: cover;
     filter: brightness(1.4) contrast(1.1);
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0);
+  }
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    #video-background {
+      position: absolute;
+    }
   }
 
   @media (max-width: 768px) {
