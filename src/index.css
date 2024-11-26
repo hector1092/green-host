@@ -12,6 +12,7 @@
 
   body {
     @apply text-text-dark;
+    overflow-x: hidden;
   }
 
   #video-background {
@@ -31,6 +32,7 @@
     backface-visibility: hidden;
     perspective: 1000;
     transform: translateZ(0);
+    will-change: transform;
   }
 
   @supports (-webkit-overflow-scrolling: touch) {
