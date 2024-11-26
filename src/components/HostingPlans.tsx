@@ -66,8 +66,8 @@ const HostingPlans = () => {
   return (
     <section dir="rtl" className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
-        <p className="subheading text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
+        <h2 className="heading text-center mb-4 text-blue-800">خطط الاستضافة</h2>
+        <p className="subheading text-center mb-16 text-blue-800">اختر الخطة المناسبة لمشروعك</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <div 
