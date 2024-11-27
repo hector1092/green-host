@@ -4,13 +4,14 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Video Background */}
+      {/* Video Background - تم تحديث خصائص العرض */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="fixed top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover -z-10"
+        className="fixed top-0 left-0 w-screen h-screen object-cover scale-110 -z-10"
+        style={{ transform: 'scale(1.1)' }}
       >
         <source src="/vedio/green 4545.mp4" type="video/mp4" />
         Your browser does not support the video tag.
