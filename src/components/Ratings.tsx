@@ -4,25 +4,21 @@ import { Star } from 'lucide-react';
 const Ratings = () => {
   const ratings = [
     {
-      logo: "/icons/wpbeginner.png",
       rating: 4.7,
       reviews: 874,
       name: "WPBeginner"
     },
     {
-      logo: "/icons/hostadvice.png",
       rating: 4.6,
       reviews: 2432,
       name: "HostAdvice"
     },
     {
-      logo: "/icons/google.png",
       rating: 4.8,
       reviews: 1237,
       name: "Google"
     },
     {
-      logo: "/icons/trustpilot.png",
       rating: 4.7,
       reviews: 35703,
       name: "TrustPilot"
@@ -57,11 +53,7 @@ const Ratings = () => {
               className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300"
             >
               <div className="flex flex-col items-center gap-4">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="h-8 object-contain mb-2"
-                />
+                <h3 className="text-xl font-bold text-primary mb-2">{item.name}</h3>
                 {renderStars(item.rating)}
                 <div className="text-center">
                   <p className="text-xl font-bold text-white mb-1">
