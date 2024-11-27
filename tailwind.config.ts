@@ -36,6 +36,10 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      animation: {
+        "spin-slow": "spin-slow 20s linear infinite",
+        "text-flow": "text-flow 3s ease infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
