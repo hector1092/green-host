@@ -10,10 +10,10 @@ const Header = () => {
       <div className="hero-circle w-[500px] h-[500px] right-[200px] bottom-[100px] opacity-50" />
       
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-lg shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-lg shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <Globe className="w-8 h-8 text-primary globe-spin" />
+            <Globe className="w-8 h-8 text-primary animate-spin-slow" />
             <span className="text-2xl font-bold text-primary">Green Host</span>
           </div>
           
@@ -26,6 +26,16 @@ const Header = () => {
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
+        {/* Background Images */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-secondary via-secondary/95 to-secondary" />
+          <img 
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
+            alt="Technology Background" 
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
+
         <div className="text-center space-y-8" dir="rtl">
           <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-primary via-primary-light to-primary text-transparent bg-clip-text animate-text-flow drop-shadow-lg">
             مرحباً بك في
@@ -33,9 +43,41 @@ const Header = () => {
           <h2 className="text-6xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl tracking-wider">
             Green Host
           </h2>
-          <p className="text-2xl md:text-3xl text-gray-200 mb-8 font-semibold leading-relaxed max-w-3xl mx-auto">
-            استضافة موثوقة وسريعة لأعمالك مع أفضل الخدمات والدعم الفني على مدار الساعة
+          <p className="text-3xl md:text-4xl text-white mb-8 font-bold leading-relaxed max-w-3xl mx-auto bg-secondary/50 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+            سرعة، أمان، احترافية
           </p>
+
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1496307653780-42ee777d4833"
+                alt="Speed"
+                className="w-16 h-16 mx-auto mb-4 rounded-lg object-cover"
+              />
+              <h3 className="text-xl font-bold text-primary mb-2">سرعة</h3>
+              <p className="text-gray-300">خوادم فائقة السرعة تضمن أداءً استثنائياً</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                alt="Security"
+                className="w-16 h-16 mx-auto mb-4 rounded-lg object-cover"
+              />
+              <h3 className="text-xl font-bold text-primary mb-2">أمان</h3>
+              <p className="text-gray-300">حماية متقدمة وشهادات SSL مجانية</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+                alt="Professionalism"
+                className="w-16 h-16 mx-auto mb-4 rounded-lg object-cover"
+              />
+              <h3 className="text-xl font-bold text-primary mb-2">احترافية</h3>
+              <p className="text-gray-300">دعم فني محترف على مدار الساعة</p>
+            </div>
+          </div>
+
           <a 
             href="https://wa.me/201030435987"
             target="_blank"
