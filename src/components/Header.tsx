@@ -5,12 +5,14 @@ import { Globe, Shield, Award, Star } from 'lucide-react';
 const Header = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Background circles with reduced blur */}
-      <div className="hero-circle w-[600px] h-[600px] right-[-100px] top-[-100px] opacity-40" />
-      <div className="hero-circle w-[500px] h-[500px] right-[200px] bottom-[100px] opacity-30" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-90"
+        style={{ backgroundImage: 'url(/background.svg)' }}
+      />
       
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90 backdrop-blur-sm shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
             <Globe className="w-8 h-8 text-primary animate-spin-slow" />
@@ -26,11 +28,6 @@ const Header = () => {
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
-        {/* Background gradient - brighter and clearer */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-secondary via-primary/30 to-secondary opacity-80" />
-        </div>
-
         <div className="text-center space-y-8" dir="rtl">
           <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-primary via-primary-light to-primary text-transparent bg-clip-text animate-text-flow drop-shadow-lg">
             مرحباً بك في
@@ -39,23 +36,23 @@ const Header = () => {
             Green Host
           </h2>
 
-          {/* Feature Cards - Updated with professional icons */}
+          {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="bg-white/20 p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
                 <Star className="w-8 h-8 text-primary animate-pulse" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">سرعة</h3>
               <p className="text-gray-100">خوادم فائقة السرعة تضمن أداءً استثنائياً</p>
             </div>
-            <div className="bg-white/20 p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
                 <Shield className="w-8 h-8 text-primary animate-pulse" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">أمان</h3>
               <p className="text-gray-100">حماية متقدمة وشهادات SSL مجانية</p>
             </div>
-            <div className="bg-white/20 p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/20 shadow-xl">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
                 <Award className="w-8 h-8 text-primary animate-pulse" />
               </div>
