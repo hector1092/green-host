@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-lg shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <Globe className="w-8 h-8 text-primary animate-spin-slow origin-center" />
+            <Globe className="w-8 h-8 text-primary globe-spin" />
             <span className="text-2xl font-bold text-primary">Green Host</span>
           </div>
           

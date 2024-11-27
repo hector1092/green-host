@@ -50,3 +50,17 @@
     padding: 0.5em;
   }
 }
+
+.globe-spin {
+  animation: globe-spin 20s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes globe-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
