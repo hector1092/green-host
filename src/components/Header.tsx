@@ -2,17 +2,22 @@ import React, { useState, useEffect } from 'react';
 import AboutUsDialog from './AboutUsDialog';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setIsVisible(false);
+      } else { // if scroll up show the navbar
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', controlNavbar);
+    return () => window.removeEventListener('scroll', controlNavbar);
+  }, [lastScrollY]);
 
   return (
     <div className="relative min-h-screen">
@@ -31,16 +36,16 @@ const Header = () => {
       {/* Fixed Navigation */}
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-secondary/80 backdrop-blur-md shadow-lg transform -translate-y-0' 
-            : 'bg-transparent transform -translate-y-0'
+          isVisible 
+            ? 'transform translate-y-0 bg-secondary/80 backdrop-blur-md' 
+            : 'transform -translate-y-full'
         }`}
       >
-        <div className="container mx-auto flex flex-col sm:flex-row justify-start items-center py-2 px-4 sm:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full sm:w-auto">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-start items-center py-1 px-2 sm:px-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
             <a 
               href="#" 
-              className="text-white hover:text-primary-light transition-all duration-300 text-base sm:text-lg font-bold font-poppins mb-2 sm:mb-0"
+              className="text-white hover:text-primary-light transition-all duration-300 text-sm sm:text-base font-bold font-poppins mb-1 sm:mb-0"
             >
               الرئيسية
             </a>
@@ -49,9 +54,9 @@ const Header = () => {
               href="https://wa.me/201030435987"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-3 sm:px-6 py-1.5 sm:py-2 rounded-lg 
-                       text-base sm:text-lg font-bold font-poppins transition-all duration-300 transform 
-                       hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2"
+              className="w-full sm:w-auto bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-2 sm:px-4 py-1 sm:py-1.5 rounded-lg 
+                       text-sm sm:text-base font-bold font-poppins transition-all duration-300 transform 
+                       hover:scale-105 hover:shadow-xl flex items-center justify-center gap-1"
             >
               احجز الان
             </a>
