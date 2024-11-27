@@ -44,7 +44,7 @@ const Header = () => {
                      hover:bg-primary-dark transition-all duration-300 transform hover:scale-105
                      shadow-lg hover:shadow-primary/30"
           >
-            تواصل عبر واتساب
+            احجز الان
           </a>
         </div>
       </div>
