@@ -18,11 +18,11 @@ const Header = () => {
 
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/5 backdrop-blur-[2px] shadow-lg">
-        <div className="container mx-auto flex justify-start items-center py-4 px-8">
-          <div className="flex items-center gap-8">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-start items-center py-4 px-4 sm:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full sm:w-auto">
             <a 
               href="#" 
-              className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold font-poppins"
+              className="text-white hover:text-primary-light transition-all duration-300 text-lg sm:text-xl font-bold font-poppins mb-2 sm:mb-0"
             >
               الرئيسية
             </a>
@@ -31,9 +31,9 @@ const Header = () => {
               href="https://wa.me/201030435987"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-8 py-3 rounded-lg 
-                       text-xl font-bold font-poppins transition-all duration-300 transform 
-                       hover:scale-105 hover:shadow-xl flex items-center gap-2"
+              className="w-full sm:w-auto bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg 
+                       text-lg sm:text-xl font-bold font-poppins transition-all duration-300 transform 
+                       hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2"
             >
               احجز الان
             </a>
@@ -43,7 +43,7 @@ const Header = () => {
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
-        <div className="text-center space-y-8" dir="rtl">
+        <div className="text-center space-y-6 sm:space-y-8" dir="rtl">
           {/* Content can be added here if needed */}
         </div>
       </div>
