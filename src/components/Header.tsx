@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-lg shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <Globe className="w-8 h-8 text-primary animate-spin-slow" />
+            <Globe className="w-8 h-8 text-primary animate-spin-slow origin-center" />
             <span className="text-2xl font-bold text-primary">Green Host</span>
           </div>
           
@@ -38,11 +38,13 @@ const Header = () => {
           </p>
           <a 
             href="https://wa.me/201030435987"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-primary text-white px-8 py-4 rounded-full text-xl font-bold
                      hover:bg-primary-dark transition-all duration-300 transform hover:scale-105
                      shadow-lg hover:shadow-primary/30"
           >
-            احجز الان
+            تواصل عبر واتساب
           </a>
         </div>
       </div>
