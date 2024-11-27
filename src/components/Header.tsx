@@ -9,15 +9,20 @@ const Header = () => {
         autoPlay
         loop
         muted
+        playsInline
         className="fixed top-0 left-0 w-full h-full object-cover -z-10"
       >
         <source src="/vedio/green 4545.mp4" type="video/mp4" />
       </video>
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary">
-        <div className="container mx-auto flex justify-end items-center py-4 px-8">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90">
+        <div className="container mx-auto flex justify-start items-center py-4 px-8">
           <div className="flex items-center gap-8">
+            <a href="#" className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold">
+              الرئيسية
+            </a>
+            <AboutUsDialog />
             <a 
               href="https://wa.me/201030435987"
               target="_blank"
@@ -30,10 +35,6 @@ const Header = () => {
               }}
             >
               احجز الان
-            </a>
-            <AboutUsDialog />
-            <a href="#" className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold">
-              الرئيسية
             </a>
           </div>
         </div>
