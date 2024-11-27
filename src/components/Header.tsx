@@ -10,28 +10,30 @@ const Header = () => {
         loop
         muted
         className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-        style={{ filter: 'brightness(0.6)' }}
       >
         <source src="/vedio/green 4545.mp4" type="video/mp4" />
       </video>
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary shadow-xl">
-        <div className="container mx-auto flex justify-between items-center py-6">
-          <div className="flex items-center gap-2">
-          </div>
-          
-          <div className="flex gap-8 text-lg items-center">
-            <a href="#" className="nav-link font-bold text-xl hover:text-primary-light transition-all duration-300">الرئيسية</a>
-            <AboutUsDialog />
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary">
+        <div className="container mx-auto flex justify-end items-center py-4 px-8">
+          <div className="flex items-center gap-8">
             <a 
               href="https://wa.me/201030435987"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg text-lg font-bold
-                       transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-[#0FA0CE] hover:bg-[#0D8CB6] text-white px-8 py-3 rounded-lg text-xl font-bold
+                       transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2"
+              style={{
+                background: 'linear-gradient(45deg, #0FA0CE, #33C3F0)',
+                boxShadow: '0 4px 15px rgba(15, 160, 206, 0.3)'
+              }}
             >
               احجز الان
+            </a>
+            <AboutUsDialog />
+            <a href="#" className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold">
+              الرئيسية
             </a>
           </div>
         </div>
