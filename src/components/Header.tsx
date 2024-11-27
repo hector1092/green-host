@@ -28,7 +28,7 @@ const Header = () => {
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
         {/* Background gradient */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-secondary via-primary/5 to-secondary" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-secondary via-primary/20 to-secondary opacity-90" />
         </div>
 
         <div className="text-center space-y-8" dir="rtl">
@@ -38,7 +38,7 @@ const Header = () => {
           <h2 className="text-6xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl tracking-wider">
             Green Host
           </h2>
-          <p className="text-3xl md:text-4xl text-white mb-8 font-bold leading-relaxed max-w-3xl mx-auto bg-secondary/50 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+          <p className="text-3xl md:text-4xl text-white mb-8 font-bold leading-relaxed max-w-3xl mx-auto bg-secondary/70 backdrop-blur-sm p-6 rounded-xl shadow-xl">
             سرعة، أمان، احترافية
           </p>
 
