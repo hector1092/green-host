@@ -10,22 +10,13 @@ const Header = () => {
         loop
         muted
         playsInline
-        preload="auto"
         className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-        style={{ 
-          willChange: 'transform',
-          minWidth: '100%',
-          minHeight: '100%',
-          width: 'auto',
-          height: 'auto'
-        }}
       >
         <source src="/vedio/green 4545.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/10 backdrop-blur-[2px]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90">
         <div className="container mx-auto flex justify-start items-center py-4 px-8">
           <div className="flex items-center gap-8">
             <a href="#" className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold">
