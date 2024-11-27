@@ -7,9 +7,9 @@ const Header = () => {
 
   useEffect(() => {
     const controlNavbar = () => {
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      if (window.scrollY > lastScrollY) {
         setIsVisible(false);
-      } else { // if scroll up show the navbar
+      } else {
         setIsVisible(true);
       }
       setLastScrollY(window.scrollY);
@@ -21,17 +21,19 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-      >
-        <source src="vedio/green 4545.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Video Background with updated styling */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-[150%] min-h-[150%] w-auto h-auto object-cover scale-125 sm:scale-110"
+        >
+          <source src="vedio/green 4545.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* Fixed Navigation */}
       <nav 
