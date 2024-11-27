@@ -4,15 +4,9 @@ import { Globe, Shield, Award, Star } from 'lucide-react';
 
 const Header = () => {
   return (
-    <div className="relative min-h-screen">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-100"
-        style={{ backgroundImage: 'url(/background.svg)' }}
-      />
-      
+    <div className="relative min-h-screen bg-secondary">
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-sm shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
             <Globe className="w-8 h-8 text-primary animate-spin-slow" />
