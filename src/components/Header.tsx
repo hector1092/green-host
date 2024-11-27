@@ -10,7 +10,7 @@ const Header = () => {
       <div className="hero-circle w-[500px] h-[500px] right-[200px] bottom-[100px] opacity-50" />
       
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-lg shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-lg shadow-lg">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
             <Globe className="w-8 h-8 text-primary animate-spin-slow" />
@@ -25,7 +25,7 @@ const Header = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-4 min-h-screen flex flex-col justify-center items-center relative">
+      <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
         <div className="text-center space-y-8" dir="rtl">
           <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-primary via-primary-light to-primary text-transparent bg-clip-text animate-text-flow drop-shadow-lg">
             مرحباً بك في
