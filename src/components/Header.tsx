@@ -39,7 +39,6 @@ const Header = () => {
             Green Host
           </h2>
           <p className="text-3xl md:text-4xl text-white mb-8 font-bold leading-relaxed max-w-3xl mx-auto bg-secondary/70 backdrop-blur-sm p-6 rounded-xl shadow-xl">
-            سرعة، أمان، احترافية
           </p>
 
           {/* Feature Cards */}
