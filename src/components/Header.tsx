@@ -22,10 +22,6 @@ const Header = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
         <div className="text-center space-y-8" dir="rtl">
-          <h2 className="text-6xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl tracking-wider">
-            Green Host
-          </h2>
-
           {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/10 shadow-xl">
