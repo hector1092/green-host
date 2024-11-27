@@ -10,13 +10,15 @@ const Header = () => {
         loop
         muted
         playsInline
+        preload="auto"
         className="fixed top-0 left-0 w-full h-full object-cover -z-10"
+        style={{ willChange: 'transform' }}
       >
         <source src="/vedio/green 4545.mp4" type="video/mp4" />
       </video>
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/30 backdrop-blur-sm">
         <div className="container mx-auto flex justify-start items-center py-4 px-8">
           <div className="flex items-center gap-8">
             <a href="#" className="text-white hover:text-primary-light transition-all duration-300 text-xl font-bold">
