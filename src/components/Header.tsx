@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AboutUsDialog from './AboutUsDialog';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="relative min-h-screen">
       {/* Video Background */}
@@ -12,17 +24,23 @@ const Header = () => {
         playsInline
         className="fixed top-0 left-0 w-full h-full object-cover -z-10"
       >
-        <source src="/vedio/green 4545.mp4" type="video/mp4" />
+        <source src="vedio/green 4545.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/5 backdrop-blur-[2px] shadow-lg">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-start items-center py-4 px-4 sm:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full sm:w-auto">
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-secondary/80 backdrop-blur-md shadow-lg transform -translate-y-0' 
+            : 'bg-transparent transform -translate-y-0'
+        }`}
+      >
+        <div className="container mx-auto flex flex-col sm:flex-row justify-start items-center py-2 px-4 sm:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full sm:w-auto">
             <a 
               href="#" 
-              className="text-white hover:text-primary-light transition-all duration-300 text-lg sm:text-xl font-bold font-poppins mb-2 sm:mb-0"
+              className="text-white hover:text-primary-light transition-all duration-300 text-base sm:text-lg font-bold font-poppins mb-2 sm:mb-0"
             >
               الرئيسية
             </a>
@@ -31,8 +49,8 @@ const Header = () => {
               href="https://wa.me/201030435987"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg 
-                       text-lg sm:text-xl font-bold font-poppins transition-all duration-300 transform 
+              className="w-full sm:w-auto bg-gradient-to-r from-[#0FA0CE] to-[#33C3F0] text-white px-3 sm:px-6 py-1.5 sm:py-2 rounded-lg 
+                       text-base sm:text-lg font-bold font-poppins transition-all duration-300 transform 
                        hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2"
             >
               احجز الان
