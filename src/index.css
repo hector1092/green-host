@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-secondary text-white overflow-x-hidden;
+    @apply bg-gradient-to-br from-secondary via-secondary-dark to-secondary text-white overflow-x-hidden;
   }
 }
 
@@ -22,11 +22,20 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary hover:bg-primary-dark text-white shadow-xl;
+    @apply btn bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary 
+           text-white shadow-xl hover:shadow-primary/20;
   }
 
   .nav-link {
-    @apply text-white hover:text-primary transition-colors duration-300 font-medium;
+    @apply text-white hover:text-primary transition-colors duration-300 font-medium 
+           relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+           after:bg-primary hover:after:w-full after:transition-all after:duration-300;
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 
+           hover:border-primary/30 transition-all duration-300 hover:shadow-lg 
+           hover:shadow-primary/5;
   }
 }
 
@@ -60,4 +69,13 @@
 
 .animate-text-flow {
   animation: text-flow 3s ease infinite;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-md rounded-xl border border-white/20 
+         hover:border-primary/30 transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent;
 }

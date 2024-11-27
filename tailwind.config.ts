@@ -23,14 +23,14 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#00BFA5",
-          dark: "#00897B",
-          light: "#4DB6AC",
+          DEFAULT: "#33C3F0",
+          dark: "#0FA0CE",
+          light: "#66D4F4",
         },
         secondary: {
-          DEFAULT: "#004D40",
-          dark: "#00352C",
-          light: "#00695C",
+          DEFAULT: "#1A1F2C",
+          dark: "#141722",
+          light: "#2A2F3C",
         },
       },
       fontFamily: {
@@ -39,6 +39,13 @@ export default {
       animation: {
         "spin-slow": "spin-slow 20s linear infinite",
         "text-flow": "text-flow 3s ease infinite",
+        "float": "float 3s ease-in-out infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
     },
   },
