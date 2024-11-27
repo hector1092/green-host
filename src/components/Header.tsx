@@ -38,8 +38,6 @@ const Header = () => {
           <h2 className="text-6xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl tracking-wider">
             Green Host
           </h2>
-          <p className="text-3xl md:text-4xl text-white mb-8 font-bold leading-relaxed max-w-3xl mx-auto bg-secondary/70 backdrop-blur-sm p-6 rounded-xl shadow-xl">
-          </p>
 
           {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
