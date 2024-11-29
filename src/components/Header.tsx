@@ -8,7 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const controlNavbar = () => {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) { // Only hide after scrolling down 100px
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -57,7 +57,9 @@ const Header = () => {
             >
               سابقة أعمال تصميم المواقع
             </Link>
-            <AboutUsDialog />
+            <span className="text-white hover:text-primary-light transition-all duration-300 text-sm sm:text-base font-bold font-poppins cursor-pointer">
+              من نحن
+            </span>
             <a 
               href="https://wa.me/201030435987"
               target="_blank"
