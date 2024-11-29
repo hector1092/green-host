@@ -21,17 +21,18 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Video Background with updated styling */}
+      {/* Video Background */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-[100%] min-h-[100%] w-auto h-auto object-cover scale-100"
+          preload="auto"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
         >
-          <source src="vedio/green 4545.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/vedio/green 4545.mp4" type="video/mp4" />
+          عذراً، متصفحك لا يدعم تشغيل الفيديو.
         </video>
       </div>
 
