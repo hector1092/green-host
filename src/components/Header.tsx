@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import AboutUsDialog from './AboutUsDialog';
 import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -8,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) { // Only hide after scrolling down 100px
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -51,12 +57,18 @@ const Header = () => {
             >
               الرئيسية
             </Link>
-            <Link 
-              to="/portfolio" 
-              className="text-white hover:text-primary-light transition-all duration-300 text-sm sm:text-base font-bold font-poppins mb-1 sm:mb-0"
-            >
-              سابقة أعمال تصميم المواقع
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-white hover:text-primary-light transition-all duration-300 text-sm sm:text-base font-bold font-poppins mb-1 sm:mb-0">
+                سابقة أعمال
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <Link to="/portfolio">
+                  <DropdownMenuItem>
+                    تصميم المواقع
+                  </DropdownMenuItem>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <span className="text-white hover:text-primary-light transition-all duration-300 text-sm sm:text-base font-bold font-poppins cursor-pointer">
               من نحن
             </span>
