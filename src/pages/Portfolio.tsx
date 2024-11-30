@@ -126,14 +126,15 @@ const Portfolio = () => {
                               alt={`${project.title} - صورة ${index + 1}`}
                               className="w-full h-full object-cover absolute top-0 left-0 rounded-lg"
                               style={{
-                                aspectRatio: "16/9",
-                                objectFit: "cover"
+                                height: "300%", // Make the image 3 times taller
+                                objectFit: "cover",
+                                objectPosition: "top"
                               }}
-                              initial={{ y: 0 }}
+                              initial={{ y: "0%" }}
                               whileHover={{
-                                y: ["0%", "100%", "0%"],
+                                y: ["-0%", "-66.666%", "-0%"],
                                 transition: {
-                                  duration: 3,
+                                  duration: 8,
                                   ease: "linear",
                                   repeat: Infinity
                                 }
