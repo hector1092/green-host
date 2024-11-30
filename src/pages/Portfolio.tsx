@@ -101,16 +101,18 @@ const Portfolio = () => {
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
                               className="w-full h-full object-contain absolute top-0 left-0"
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              viewport={{ once: true, margin: "-50px" }}
-                              transition={{ 
-                                duration: 0.5,
-                                delay: index * 0.3
+                              initial={{ opacity: 0 }}
+                              whileInView={{
+                                opacity: [0, 1, 0],
+                                transition: {
+                                  duration: 2,
+                                  times: [0, 0.5, 1],
+                                  delay: index * 2,
+                                  repeat: Infinity,
+                                  repeatDelay: (project.imageUrls.length - 1) * 2
+                                }
                               }}
-                              style={{
-                                zIndex: project.imageUrls.length - index
-                              }}
+                              viewport={{ once: false, margin: "-50px" }}
                             />
                           ))}
                         </div>
