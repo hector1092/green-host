@@ -8,7 +8,7 @@ const Portfolio = () => {
       id: 1,
       title: "نظام تحليل البيانات المتقدم",
       description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي",
-      websiteUrl: "https://aquamarine-licorice-37c027.netlify.app/",
+      websiteUrl: "https://souqeltakeefat.com/",
       imageUrls: [
         "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/6299725a-5e42-445f-a8b3-a8004ba0e3ff.png",
         "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/4eb0c1a3-d6a4-43aa-88a6-79d8fba1fc34.png",
@@ -18,47 +18,56 @@ const Portfolio = () => {
     {
       id: 2,
       title: "منصة البرمجة التفاعلية",
-      description: "بيئة برمجة متكاملة للتعلم والتطوير بأحدث التقنيات"
+      description: "بيئة برمجة متكاملة للتعلم والتطوير بأحدث التقنيات",
+      websiteUrl: "https://egysweetexpo.com/"
     },
     {
       id: 3,
       title: "نظام إدارة الشبكات",
-      description: "حل متكامل لإدارة ومراقبة الشبكات بكفاءة عالية"
+      description: "حل متكامل لإدارة ومراقبة الشبكات بكفاءة عالية",
+      websiteUrl: "https://coverexexpo.com/"
     },
     {
       id: 4,
       title: "منصة الذكاء الاصطناعي",
-      description: "تطبيقات ذكاء اصطناعي متقدمة لحل المشكلات المعقدة"
+      description: "تطبيقات ذكاء اصطناعي متقدمة لحل المشكلات المعقدة",
+      websiteUrl: "https://autoline-car-rent.com/"
     },
     {
       id: 5,
       title: "نظام الأمن السيبراني",
-      description: "حماية متقدمة للبيانات والأنظمة من التهديدات الإلكترونية"
+      description: "حماية متقدمة للبيانات والأنظمة من التهديدات الإلكترونية",
+      websiteUrl: "https://al-manaraconsult.com/"
     },
     {
       id: 6,
       title: "منصة الروبوتات المتقدمة",
-      description: "برمجة وإدارة الروبوتات الذكية للتطبيقات الصناعية"
+      description: "برمجة وإدارة الروبوتات الذكية للتطبيقات الصناعية",
+      websiteUrl: "https://www.siagates.com/"
     },
     {
       id: 7,
       title: "نظام معالجة البيانات",
-      description: "معالجة وتحليل البيانات المعقدة باستخدام خوارزميات متطورة"
+      description: "معالجة وتحليل البيانات المعقدة باستخدام خوارزميات متطورة",
+      websiteUrl: "https://bakarmanfoods.com/"
     },
     {
       id: 8,
       title: "منصة المراقبة الذكية",
-      description: "نظام مراقبة ذكي متكامل مع تقنيات التعرف على الأنماط"
+      description: "نظام مراقبة ذكي متكامل مع تقنيات التعرف على الأنماط",
+      websiteUrl: "https://lamozencairo.com/"
     },
     {
       id: 9,
       title: "نظام التصميم التفاعلي",
-      description: "منصة تصميم متقدمة مع واجهات مستخدم تفاعلية"
+      description: "منصة تصميم متقدمة مع واجهات مستخدم تفاعلية",
+      websiteUrl: "https://supernovauae.ae/"
     },
     {
       id: 10,
       title: "منصة التعاون الافتراضي",
-      description: "بيئة عمل افتراضية متكاملة للمشاريع التقنية المتقدمة"
+      description: "بيئة عمل افتراضية متكاملة للمشاريع التقنية المتقدمة",
+      websiteUrl: "https://souqeltakeefat.com/"
     }
   ];
 
@@ -129,23 +138,14 @@ const Portfolio = () => {
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-2 bg-gray-800 rounded-full"></div>
               </div>
               
-              {project.websiteUrl ? (
-                <a 
-                  href={project.websiteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary mt-4 w-full max-w-xs text-center"
-                >
-                  زيارة الموقع
-                </a>
-              ) : (
-                <Link 
-                  to={`/portfolio/project-${project.id}`}
-                  className="btn-primary mt-4 w-full max-w-xs text-center"
-                >
-                  عرض المشروع
-                </Link>
-              )}
+              <a 
+                href={project.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary mt-4 w-full max-w-xs text-center"
+              >
+                عرض المشروع
+              </a>
             </motion.div>
           ))}
         </div>
