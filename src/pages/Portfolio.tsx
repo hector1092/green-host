@@ -73,9 +73,9 @@ const Portfolio = () => {
               {/* Computer Screen Design */}
               <div className="relative w-full aspect-[4/3] mb-6">
                 {/* Screen Frame */}
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
+                <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 rounded-lg p-2">
                   {/* Screen Content */}
-                  <div className="relative h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded border border-gray-700 p-4">
+                  <div className="relative h-full bg-gradient-to-br from-white to-gray-50 rounded border border-gray-200 p-4">
                     {/* Screen Header */}
                     <div className="absolute top-2 left-2 flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
