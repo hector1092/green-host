@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const projects = [
@@ -75,7 +76,14 @@ const Portfolio = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project) => (
-            <div key={project.id} className="flex flex-col items-center group">
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center"
+            >
               <div className="relative w-full aspect-[4/3] mb-6">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
                   <div className="relative h-full bg-white rounded border border-gray-200 p-4 overflow-hidden">
@@ -84,18 +92,23 @@ const Portfolio = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                     </div>
-                    <div className="h-full flex flex-col items-center justify-center text-center p-4">
+                    <div className="h-full flex flex-col items-center justify-center text-center">
                       {project.imageUrls ? (
-                        <div className="w-full h-full overflow-hidden">
+                        <div className="w-full h-full">
                           {project.imageUrls.map((imageUrl, index) => (
-                            <img 
+                            <motion.img
                               key={index}
-                              src={imageUrl} 
+                              src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
-                              className="w-full h-full object-cover transform transition-all duration-700 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0"
-                              style={{ 
-                                transitionDelay: `${index * 200}ms`,
-                                display: index === 0 ? 'block' : 'none'
+                              className="w-full h-full object-contain absolute top-0 left-0"
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ 
+                                duration: 0.5,
+                                delay: index * 0.2
+                              }}
+                              style={{
+                                zIndex: project.imageUrls.length - index
                               }}
                             />
                           ))}
@@ -130,7 +143,7 @@ const Portfolio = () => {
                   عرض المشروع
                 </Link>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
