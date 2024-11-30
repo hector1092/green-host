@@ -1,21 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  link: string;
-} & ({
-  embed: string;
-  image?: never;
-} | {
-  image: string;
-  embed?: never;
-});
-
 const Portfolio = () => {
-  const projects: Project[] = [
+  const projects = [
     {
       id: 1,
       title: "تصميم موقع إلكتروني",
