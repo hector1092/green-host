@@ -70,31 +70,24 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col items-center">
-              {/* Computer Screen Design */}
               <div className="relative w-full aspect-[4/3] mb-6">
-                {/* Screen Frame */}
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
-                  {/* Screen Content */}
                   <div className="relative h-full bg-white rounded border border-gray-200 p-4">
-                    {/* Screen Header */}
                     <div className="absolute top-2 left-2 flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                     </div>
-                    {/* Project Content */}
                     <div className="h-full flex flex-col items-center justify-center text-center p-4">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
                       <p className="text-gray-600 text-sm">{project.description}</p>
                     </div>
                   </div>
                 </div>
-                {/* Stand */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-gradient-to-b from-gray-700 to-gray-800 rounded"></div>
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-2 bg-gray-800 rounded-full"></div>
               </div>
               
-              {/* View Project Button */}
               <Link 
                 to={`/portfolio/project-${project.id}`}
                 className="btn-primary mt-4 w-full max-w-xs text-center"
