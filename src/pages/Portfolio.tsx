@@ -8,7 +8,11 @@ const Portfolio = () => {
       title: "نظام تحليل البيانات المتقدم",
       description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي",
       websiteUrl: "https://autoline-car-rent.com/",
-      imageUrl: "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_02.png"
+      imageUrls: [
+        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_02.png",
+        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_18.png",
+        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_44_42.png"
+      ]
     },
     {
       id: 2,
@@ -71,22 +75,31 @@ const Portfolio = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project) => (
-            <div key={project.id} className="flex flex-col items-center">
+            <div key={project.id} className="flex flex-col items-center group">
               <div className="relative w-full aspect-[4/3] mb-6">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
-                  <div className="relative h-full bg-white rounded border border-gray-200 p-4">
+                  <div className="relative h-full bg-white rounded border border-gray-200 p-4 overflow-hidden">
                     <div className="absolute top-2 left-2 flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center p-4">
-                      {project.imageUrl ? (
-                        <img 
-                          src={project.imageUrl} 
-                          alt={project.title}
-                          className="w-full h-full object-contain mb-4"
-                        />
+                      {project.imageUrls ? (
+                        <div className="w-full h-full overflow-hidden">
+                          {project.imageUrls.map((imageUrl, index) => (
+                            <img 
+                              key={index}
+                              src={imageUrl} 
+                              alt={`${project.title} - صورة ${index + 1}`}
+                              className="w-full h-full object-cover transform transition-all duration-700 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0"
+                              style={{ 
+                                transitionDelay: `${index * 200}ms`,
+                                display: index === 0 ? 'block' : 'none'
+                              }}
+                            />
+                          ))}
+                        </div>
                       ) : (
                         <>
                           <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
