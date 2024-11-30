@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const Portfolio = () => {
   const projects = [
@@ -89,14 +92,21 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-white py-12 md:py-24" dir="rtl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 md:mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-[#33C3F0] via-[#66D4F4] to-[#33C3F0] bg-clip-text text-transparent">
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#33C3F0] via-[#66D4F4] to-[#33C3F0] bg-clip-text text-transparent">
             معرض المشاريع المتقدمة
           </h1>
-          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            مجموعة من المشاريع التقنية المتقدمة التي تعكس خبرتنا في مجال الحوسبة والبرمجة
-          </p>
+          <Link to="/">
+            <Button className="flex items-center gap-2 bg-primary hover:bg-primary-dark">
+              <ArrowRight className="h-4 w-4" />
+              العودة للرئيسية
+            </Button>
+          </Link>
         </div>
+        
+        <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          مجموعة من المشاريع التقنية المتقدمة التي تعكس خبرتنا في مجال الحوسبة والبرمجة
+        </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
           {projects.map((project) => (
