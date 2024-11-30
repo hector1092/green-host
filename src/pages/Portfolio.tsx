@@ -1,43 +1,52 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "نظام تحليل البيانات المتقدم",
-      description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي",
+      title: "سوق التكييفات",
+      description: "منصة متطورة لبيع وشراء أجهزة التكييف",
       websiteUrl: "https://souqeltakeefat.com/",
       imageUrls: [
-        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/6299725a-5e42-445f-a8b3-a8004ba0e3ff.png",
-        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/4eb0c1a3-d6a4-43aa-88a6-79d8fba1fc34.png",
-        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/6299725a-5e42-445f-a8b3-a8004ba0e3ff.png"
+        "/lovable-uploads/27ff4a97-b611-44c7-92d2-7bafcb22bfc9.png",
       ]
     },
     {
       id: 2,
-      title: "منصة البرمجة التفاعلية",
-      description: "بيئة برمجة متكاملة للتعلم والتطوير بأحدث التقنيات",
-      websiteUrl: "https://egysweetexpo.com/"
+      title: "معرض الحلويات المصري",
+      description: "معرض متخصص في صناعة الحلويات والشوكولاتة",
+      websiteUrl: "https://egysweetexpo.com/",
+      imageUrls: [
+        "/lovable-uploads/a463352f-010c-4c9d-b1d8-3527f67986ab.png",
+      ]
     },
     {
       id: 3,
-      title: "نظام إدارة الشبكات",
-      description: "حل متكامل لإدارة ومراقبة الشبكات بكفاءة عالية",
-      websiteUrl: "https://coverexexpo.com/"
+      title: "معرض المفروشات",
+      description: "معرض متخصص في المفروشات والأثاث المنزلي",
+      websiteUrl: "https://coverexexpo.com/",
+      imageUrls: [
+        "/lovable-uploads/80df9451-829d-4587-867d-f476d28bde88.png",
+      ]
     },
     {
       id: 4,
-      title: "منصة الذكاء الاصطناعي",
-      description: "تطبيقات ذكاء اصطناعي متقدمة لحل المشكلات المعقدة",
-      websiteUrl: "https://autoline-car-rent.com/"
+      title: "أوتو لاين لتأجير السيارات",
+      description: "منصة متخصصة في تأجير السيارات",
+      websiteUrl: "https://autoline-car-rent.com/",
+      imageUrls: [
+        "/lovable-uploads/e1eca2e5-3149-4c0e-bb63-4ec8daf53e48.png",
+      ]
     },
     {
       id: 5,
-      title: "نظام الأمن السيبراني",
-      description: "حماية متقدمة للبيانات والأنظمة من التهديدات الإلكترونية",
-      websiteUrl: "https://al-manaraconsult.com/"
+      title: "شركة المنارة للاستشارات",
+      description: "شركة متخصصة في الاستشارات الهندسية",
+      websiteUrl: "https://al-manaraconsult.com/",
+      imageUrls: [
+        "/lovable-uploads/af464e9d-ade3-4ea3-85ba-b1ed2be1ac3a.png",
+      ]
     },
     {
       id: 6,
@@ -109,19 +118,10 @@ const Portfolio = () => {
                               key={index}
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
-                              className="w-full h-full object-contain absolute top-0 left-0"
+                              className="w-full h-full object-cover absolute top-0 left-0 rounded"
                               initial={{ opacity: 0 }}
-                              whileInView={{
-                                opacity: [0, 1, 0],
-                                transition: {
-                                  duration: 2,
-                                  times: [0, 0.5, 1],
-                                  delay: index * 2,
-                                  repeat: Infinity,
-                                  repeatDelay: (project.imageUrls.length - 1) * 2
-                                }
-                              }}
-                              viewport={{ once: false, margin: "-50px" }}
+                              animate={{ opacity: 1 }}
+                              transition={{ duration: 0.5 }}
                             />
                           ))}
                         </div>
