@@ -21,7 +21,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div key={project.id} className="relative group">
               {/* Computer Frame */}
-              <div className="relative bg-gray-800 rounded-lg p-3">
+              <div className="relative bg-white rounded-lg p-3">
                 {/* Monitor Frame */}
                 <div className="bg-gray-900 rounded-t-lg p-2">
                   {/* Screen Content */}
