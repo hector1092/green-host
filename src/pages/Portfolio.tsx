@@ -124,16 +124,19 @@ const Portfolio = () => {
                               key={index}
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
-                              className="w-full h-full object-cover absolute top-0 left-0 rounded-lg transform 
-                                       transition-all duration-500 ease-in-out group-hover:translate-y-2 group-hover:scale-105
-                                       hover:shadow-xl"
+                              className="w-full h-full object-cover absolute top-0 left-0 rounded-lg 
+                                       transition-all duration-500 ease-in-out shadow-lg"
                               style={{
                                 aspectRatio: "16/9",
                                 objectFit: "cover"
                               }}
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
-                              transition={{ duration: 0.5 }}
+                              whileHover={{ 
+                                y: -10,
+                                scale: 1.05,
+                                transition: { duration: 0.3, ease: "easeOut" }
+                              }}
                             />
                           ))}
                         </div>
