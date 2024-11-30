@@ -87,45 +87,45 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-24" dir="rtl">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-[#33C3F0] via-[#66D4F4] to-[#33C3F0] bg-clip-text text-transparent">
+    <div className="min-h-screen bg-white py-12 md:py-24" dir="rtl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 md:mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-[#33C3F0] via-[#66D4F4] to-[#33C3F0] bg-clip-text text-transparent">
             معرض المشاريع المتقدمة
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             مجموعة من المشاريع التقنية المتقدمة التي تعكس خبرتنا في مجال الحوسبة والبرمجة
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
           {projects.map((project) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-5%" }}
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              <div className="relative w-full aspect-[4/3] mb-6">
+              <div className="relative w-full aspect-video mb-4 md:mb-6">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
-                  <div className="relative h-full bg-white rounded border border-gray-200 p-4 overflow-hidden group">
+                  <div className="relative h-full bg-white rounded border border-gray-200 p-2 md:p-4 overflow-hidden group">
                     <div className="absolute top-2 left-2 flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-red-500"></div>
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-yellow-500"></div>
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-500"></div>
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center">
                       {project.imageUrls ? (
-                        <div className="w-full h-full relative overflow-hidden rounded-lg group">
+                        <div className="w-full h-full relative overflow-hidden rounded-lg">
                           {project.imageUrls.map((imageUrl, index) => (
                             <motion.img
                               key={index}
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
                               className="w-full h-full object-cover absolute top-0 left-0 rounded-lg 
-                                       transition-all duration-500 ease-in-out shadow-lg"
+                                       transition-transform duration-300 ease-out"
                               style={{
                                 aspectRatio: "16/9",
                                 objectFit: "cover"
@@ -133,7 +133,7 @@ const Portfolio = () => {
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               whileHover={{ 
-                                y: 10, // تحريك الصورة للأسفل بمقدار 10 بكسل
+                                y: 10,
                                 transition: { duration: 0.3, ease: "easeOut" }
                               }}
                             />
@@ -141,22 +141,25 @@ const Portfolio = () => {
                         </div>
                       ) : (
                         <>
-                          <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                          <p className="text-gray-600 text-sm">{project.description}</p>
+                          <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                          <p className="text-sm md:text-base text-gray-600">{project.description}</p>
                         </>
                       )}
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-gradient-to-b from-gray-700 to-gray-800 rounded"></div>
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-2 bg-gray-800 rounded-full"></div>
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 md:w-16 h-6 md:h-8 bg-gradient-to-b from-gray-700 to-gray-800 rounded"></div>
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-20 md:w-24 h-1.5 md:h-2 bg-gray-800 rounded-full"></div>
               </div>
               
               <a 
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary mt-4 w-full max-w-xs text-center"
+                className="w-full max-w-xs text-center px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r 
+                         from-[#33C3F0] to-[#66D4F4] text-white rounded-lg text-sm md:text-base 
+                         font-semibold transition-all duration-300 hover:shadow-lg 
+                         hover:from-[#66D4F4] hover:to-[#33C3F0]"
               >
                 عرض المشروع
               </a>
