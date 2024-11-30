@@ -8,11 +8,11 @@ const Portfolio = () => {
       id: 1,
       title: "نظام تحليل البيانات المتقدم",
       description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي",
-      websiteUrl: "https://autoline-car-rent.com/",
+      websiteUrl: "https://aquamarine-licorice-37c027.netlify.app/",
       imageUrls: [
-        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_02.png",
-        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_18.png",
-        "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_44_42.png"
+        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/6299725a-5e42-445f-a8b3-a8004ba0e3ff.png",
+        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/4eb0c1a3-d6a4-43aa-88a6-79d8fba1fc34.png",
+        "https://aquamarine-licorice-37c027.netlify.app/lovable-uploads/6299725a-5e42-445f-a8b3-a8004ba0e3ff.png"
       ]
     },
     {
@@ -80,7 +80,7 @@ const Portfolio = () => {
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
@@ -94,7 +94,7 @@ const Portfolio = () => {
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center">
                       {project.imageUrls ? (
-                        <div className="w-full h-full">
+                        <div className="w-full h-full relative">
                           {project.imageUrls.map((imageUrl, index) => (
                             <motion.img
                               key={index}
@@ -103,9 +103,10 @@ const Portfolio = () => {
                               className="w-full h-full object-contain absolute top-0 left-0"
                               initial={{ opacity: 0, y: 20 }}
                               whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, margin: "-50px" }}
                               transition={{ 
                                 duration: 0.5,
-                                delay: index * 0.2
+                                delay: index * 0.3
                               }}
                               style={{
                                 zIndex: project.imageUrls.length - index
