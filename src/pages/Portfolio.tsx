@@ -52,31 +52,46 @@ const Portfolio = () => {
       id: 6,
       title: "منصة الروبوتات المتقدمة",
       description: "برمجة وإدارة الروبوتات الذكية للتطبيقات الصناعية",
-      websiteUrl: "https://www.siagates.com/"
+      websiteUrl: "https://www.siagates.com/",
+      imageUrls: [
+        "/lovable-uploads/6d09ee7e-4e62-491c-86b5-91ccbc1e4f4c.png",
+      ]
     },
     {
       id: 7,
       title: "نظام معالجة البيانات",
       description: "معالجة وتحليل البيانات المعقدة باستخدام خوارزميات متطورة",
-      websiteUrl: "https://bakarmanfoods.com/"
+      websiteUrl: "https://bakarmanfoods.com/",
+      imageUrls: [
+        "/lovable-uploads/180733f6-df59-4990-a60e-b892ec975c97.png",
+      ]
     },
     {
       id: 8,
       title: "منصة المراقبة الذكية",
       description: "نظام مراقبة ذكي متكامل مع تقنيات التعرف على الأنماط",
-      websiteUrl: "https://lamozencairo.com/"
+      websiteUrl: "https://lamozencairo.com/",
+      imageUrls: [
+        "/lovable-uploads/154b2498-36d6-4188-96d7-2a714991d49b.png",
+      ]
     },
     {
       id: 9,
       title: "نظام التصميم التفاعلي",
       description: "منصة تصميم متقدمة مع واجهات مستخدم تفاعلية",
-      websiteUrl: "https://supernovauae.ae/"
+      websiteUrl: "https://supernovauae.ae/",
+      imageUrls: [
+        "/lovable-uploads/d95b790e-bf45-410b-9b3f-0852d47edf4d.png",
+      ]
     },
     {
       id: 10,
       title: "منصة التعاون الافتراضي",
       description: "بيئة عمل افتراضية متكاملة للمشاريع التقنية المتقدمة",
-      websiteUrl: "https://souqeltakeefat.com/"
+      websiteUrl: "https://souqeltakeefat.com/",
+      imageUrls: [
+        "/lovable-uploads/27ff4a97-b611-44c7-92d2-7bafcb22bfc9.png",
+      ]
     }
   ];
 
@@ -104,7 +119,7 @@ const Portfolio = () => {
             >
               <div className="relative w-full aspect-[4/3] mb-6">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
-                  <div className="relative h-full bg-white rounded border border-gray-200 p-4 overflow-hidden">
+                  <div className="relative h-full bg-white rounded border border-gray-200 p-4 overflow-hidden group">
                     <div className="absolute top-2 left-2 flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
@@ -112,13 +127,14 @@ const Portfolio = () => {
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center">
                       {project.imageUrls ? (
-                        <div className="w-full h-full relative">
+                        <div className="w-full h-full relative overflow-hidden rounded-lg">
                           {project.imageUrls.map((imageUrl, index) => (
                             <motion.img
                               key={index}
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
-                              className="w-full h-full object-cover absolute top-0 left-0 rounded"
+                              className="w-full h-full object-cover absolute top-0 left-0 rounded-lg transform 
+                                       transition-transform duration-500 group-hover:scale-110"
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               transition={{ duration: 0.5 }}
