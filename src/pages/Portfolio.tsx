@@ -83,15 +83,6 @@ const Portfolio = () => {
       imageUrls: [
         "/lovable-uploads/d95b790e-bf45-410b-9b3f-0852d47edf4d.png",
       ]
-    },
-    {
-      id: 10,
-      title: "منصة التعاون الافتراضي",
-      description: "بيئة عمل افتراضية متكاملة للمشاريع التقنية المتقدمة",
-      websiteUrl: "https://souqeltakeefat.com/",
-      imageUrls: [
-        "/lovable-uploads/27ff4a97-b611-44c7-92d2-7bafcb22bfc9.png",
-      ]
     }
   ];
 
@@ -127,14 +118,14 @@ const Portfolio = () => {
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center">
                       {project.imageUrls ? (
-                        <div className="w-full h-full relative overflow-hidden rounded-lg">
+                        <div className="w-full h-full relative overflow-hidden rounded-lg group">
                           {project.imageUrls.map((imageUrl, index) => (
                             <motion.img
                               key={index}
                               src={imageUrl}
                               alt={`${project.title} - صورة ${index + 1}`}
                               className="w-full h-full object-cover absolute top-0 left-0 rounded-lg transform 
-                                       transition-transform duration-500 group-hover:scale-110"
+                                       transition-all duration-500 ease-in-out group-hover:translate-y-2 group-hover:scale-105"
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               transition={{ duration: 0.5 }}
