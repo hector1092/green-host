@@ -25,7 +25,7 @@ const Header = () => {
       />
 
       {/* Company Name - Left Side */}
-      <div className="absolute top-4 left-4 z-10">
+      <div className="absolute top-4 left-4 z-30">
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
       </div>
 
@@ -78,7 +78,7 @@ const Header = () => {
           </CarouselContent>
 
           {/* Navigation Buttons - Right Side */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4 z-20">
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4 z-30">
             <CarouselPrevious className="bg-primary/20 hover:bg-primary/40 border-primary" />
             <CarouselNext className="bg-primary/20 hover:bg-primary/40 border-primary" />
           </div>
