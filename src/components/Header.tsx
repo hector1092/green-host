@@ -14,13 +14,13 @@ const Header = () => {
   );
 
   return (
-    <header className="relative min-h-screen">
+    <header className="relative min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
         style={{
           backgroundImage: "url('/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png')",
           backgroundBlendMode: "overlay",
-          backgroundColor: "rgba(0, 0, 0, 0.7)"
+          backgroundColor: "rgba(255, 255, 255, 0.9)"
         }}
       />
 
@@ -35,10 +35,10 @@ const Header = () => {
         >
           <CarouselContent>
             <CarouselItem className="md:basis-full">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 glass-card">
                 <div className="md:w-1/2 space-y-6 text-right">
                   <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">حلول برمجية متكاملة</h2>
-                  <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-poppins">
+                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-poppins">
                     نحن متخصصون في حلول الاستضافة التي تدار بالكامل من قبلنا، وعندما تحتاج إلى المساعدة المخصصة أو العادية في إدارة الاستضافة، يسعدنا تقديمها لك.
                   </p>
                 </div>
@@ -53,18 +53,32 @@ const Header = () => {
             </CarouselItem>
 
             <CarouselItem className="md:basis-full">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 glass-card">
                 <div className="md:w-1/2 space-y-6 text-right">
-                  <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">حلول استضافة متنوعة ومتكاملة</h2>
-                  <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-poppins">
-                    Green host نحن متخصصون في حلول الاستضافة التي تدار بالكامل من قبلنا، وعندما تحتاج إلى المساعدة المخصصة أو العادية في إدارة الاستضافة، يسعدنا تقديمها لك.
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">دعم فني متخصص على مدار الساعة طوال الأسبوع</h2>
+                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-poppins">
+                    نحن في Green & Host نقدم لك دعمًا فنيًا محترفًا وخدمات متكاملة لإدارة سيرفرك أو استضافتك. سواء كنت بحاجة إلى مساعدة فنية عاجلة أو استشارات مهنية، نحن هنا لتلبية احتياجاتك في أي وقت. فريقنا المتخصص متواجد على مدار الساعة لضمان استمرارية عمل موقعك بأعلى مستوى من الكفاءة والأمان. تواصل معنا في أي لحظة، وسنكون دائمًا إلى جانبك.
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary font-poppins">استضافات مخصصة ودعم فني VIP</h3>
                 </div>
                 <div className="md:w-1/2">
                   <img 
-                    src="/lovable-uploads/b137125e-7f9b-443b-b255-57623531a05b.png" 
-                    alt="حلول استضافة"
+                    src="/lovable-uploads/694ceddf-2151-4bf8-8161-3da8a4ed81a5.png" 
+                    alt="دعم فني"
+                    className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
+                  />
+                </div>
+              </div>
+            </CarouselItem>
+
+            <CarouselItem className="md:basis-full">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 glass-card">
+                <div className="md:w-1/2 space-y-6 text-right">
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">استضافة مخصصة وفائقة التميز</h2>
+                </div>
+                <div className="md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/a487d68e-7260-41ef-804e-3d9bfff8634f.png" 
+                    alt="استضافة مخصصة"
                     className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
                   />
                 </div>
@@ -72,8 +86,8 @@ const Header = () => {
             </CarouselItem>
           </CarouselContent>
 
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 border-primary" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/20 hover:bg-primary/40 border-primary" />
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-primary text-primary" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-primary text-primary" />
         </Carousel>
       </div>
     </header>

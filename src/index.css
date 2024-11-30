@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-secondary via-secondary-dark to-secondary text-white overflow-x-hidden;
+    @apply bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800 overflow-x-hidden;
   }
 }
 
@@ -27,20 +27,20 @@
   }
 
   .nav-link {
-    @apply text-white hover:text-primary transition-colors duration-300 font-medium 
+    @apply text-gray-700 hover:text-primary transition-colors duration-300 font-medium 
            relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
            after:bg-primary hover:after:w-full after:transition-all after:duration-300;
   }
 
   .card {
-    @apply bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 
+    @apply bg-white/90 backdrop-blur-sm rounded-xl border border-white/20 
            hover:border-primary/30 transition-all duration-300 hover:shadow-lg 
            hover:shadow-primary/5;
   }
 }
 
 .hero-circle {
-  @apply absolute rounded-full bg-primary/20 blur-3xl;
+  @apply absolute rounded-full bg-primary/10 blur-3xl;
 }
 
 @keyframes float {
@@ -53,8 +53,8 @@
 }
 
 .glass-card {
-  @apply bg-black/40 backdrop-blur-md rounded-xl border border-white/10 
-         hover:border-primary/30 transition-all duration-300;
+  @apply bg-white/95 backdrop-blur-sm rounded-xl border border-white/50 
+         hover:border-primary/30 transition-all duration-300 shadow-lg;
 }
 
 .text-gradient {
