@@ -6,7 +6,9 @@ const Portfolio = () => {
     {
       id: 1,
       title: "نظام تحليل البيانات المتقدم",
-      description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي"
+      description: "منصة متطورة لتحليل البيانات الضخمة وعرض النتائج بشكل تفاعلي",
+      websiteUrl: "https://autoline-car-rent.com/",
+      imageUrl: "https://engazmedia.com/wp-content/uploads/2024/10/screencapture-autoline-car-rent-2024-10-29-12_45_02.png"
     },
     {
       id: 2,
@@ -79,8 +81,18 @@ const Portfolio = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                     </div>
                     <div className="h-full flex flex-col items-center justify-center text-center p-4">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                      <p className="text-gray-600 text-sm">{project.description}</p>
+                      {project.imageUrl ? (
+                        <img 
+                          src={project.imageUrl} 
+                          alt={project.title}
+                          className="w-full h-full object-contain mb-4"
+                        />
+                      ) : (
+                        <>
+                          <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                          <p className="text-gray-600 text-sm">{project.description}</p>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -88,12 +100,23 @@ const Portfolio = () => {
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-2 bg-gray-800 rounded-full"></div>
               </div>
               
-              <Link 
-                to={`/portfolio/project-${project.id}`}
-                className="btn-primary mt-4 w-full max-w-xs text-center"
-              >
-                عرض المشروع
-              </Link>
+              {project.websiteUrl ? (
+                <a 
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary mt-4 w-full max-w-xs text-center"
+                >
+                  زيارة الموقع
+                </a>
+              ) : (
+                <Link 
+                  to={`/portfolio/project-${project.id}`}
+                  className="btn-primary mt-4 w-full max-w-xs text-center"
+                >
+                  عرض المشروع
+                </Link>
+              )}
             </div>
           ))}
         </div>
