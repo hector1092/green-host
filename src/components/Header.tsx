@@ -78,7 +78,7 @@ const Header = () => {
           </CarouselContent>
 
           {/* Navigation Buttons - Right Side */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4">
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4 z-20">
             <CarouselPrevious className="bg-primary/20 hover:bg-primary/40 border-primary" />
             <CarouselNext className="bg-primary/20 hover:bg-primary/40 border-primary" />
           </div>
