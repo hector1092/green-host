@@ -6,8 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 
 const Header = () => {
@@ -18,7 +16,7 @@ const Header = () => {
   return (
     <header className="relative min-h-screen">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
         style={{
           backgroundImage: "url('/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png')",
           backgroundBlendMode: "overlay",
@@ -39,8 +37,8 @@ const Header = () => {
             <CarouselItem className="md:basis-full">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6">
                 <div className="md:w-1/2 space-y-6 text-right">
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary">حلول برمجية متكاملة</h2>
-                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">حلول برمجية متكاملة</h2>
+                  <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-poppins">
                     نحن متخصصون في حلول الاستضافة التي تدار بالكامل من قبلنا، وعندما تحتاج إلى المساعدة المخصصة أو العادية في إدارة الاستضافة، يسعدنا تقديمها لك.
                   </p>
                 </div>
@@ -48,7 +46,7 @@ const Header = () => {
                   <img 
                     src="/lovable-uploads/2def3e78-89d2-47d7-b28e-dadd8e032b06.png" 
                     alt="حلول برمجية"
-                    className="w-full h-auto rounded-lg shadow-xl animate-float"
+                    className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
                   />
                 </div>
               </div>
@@ -57,17 +55,17 @@ const Header = () => {
             <CarouselItem className="md:basis-full">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6">
                 <div className="md:w-1/2 space-y-6 text-right">
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary">حلول استضافة متنوعة ومتكاملة</h2>
-                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">حلول استضافة متنوعة ومتكاملة</h2>
+                  <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-poppins">
                     Green host نحن متخصصون في حلول الاستضافة التي تدار بالكامل من قبلنا، وعندما تحتاج إلى المساعدة المخصصة أو العادية في إدارة الاستضافة، يسعدنا تقديمها لك.
                   </p>
-                  <h3 className="text-2xl font-bold text-primary">استضافات مخصصة ودعم فني VIP</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary font-poppins">استضافات مخصصة ودعم فني VIP</h3>
                 </div>
                 <div className="md:w-1/2">
                   <img 
                     src="/lovable-uploads/b137125e-7f9b-443b-b255-57623531a05b.png" 
                     alt="حلول استضافة"
-                    className="w-full h-auto rounded-lg shadow-xl animate-float"
+                    className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
                   />
                 </div>
               </div>
