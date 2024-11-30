@@ -20,12 +20,17 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="relative group">
-              {/* Computer Frame */}
-              <div className="relative bg-white rounded-lg p-3">
-                {/* Monitor Frame */}
-                <div className="bg-gray-900 rounded-t-lg p-2">
+              {/* Modern Computer Frame */}
+              <div className="relative bg-black rounded-2xl p-4 shadow-2xl">
+                {/* Screen Bezel */}
+                <div className="bg-black rounded-xl overflow-hidden">
+                  {/* Camera & Sensors */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 z-10">
+                    <div className="w-2 h-2 rounded-full bg-gray-800"></div>
+                    <div className="w-1 h-1 rounded-full bg-gray-700"></div>
+                  </div>
                   {/* Screen Content */}
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-white">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-white">
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -48,10 +53,10 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-                {/* Monitor Stand */}
-                <div className="flex justify-center">
-                  <div className="w-1/4 h-4 bg-gray-700 rounded-b-lg"></div>
-                  <div className="w-1/6 h-1 bg-gray-600 absolute -bottom-1"></div>
+                {/* Modern Stand */}
+                <div className="flex justify-center mt-2">
+                  <div className="w-16 h-1 bg-gray-800 rounded-full"></div>
+                  <div className="w-8 h-4 bg-gray-900 absolute -bottom-2 rounded-b-lg"></div>
                 </div>
               </div>
             </div>
