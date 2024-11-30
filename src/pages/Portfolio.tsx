@@ -56,13 +56,13 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-24" dir="rtl">
+    <div className="min-h-screen bg-white py-24" dir="rtl">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-[#33C3F0] via-[#66D4F4] to-[#33C3F0] bg-clip-text text-transparent">
             معرض المشاريع المتقدمة
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             مجموعة من المشاريع التقنية المتقدمة التي تعكس خبرتنا في مجال الحوسبة والبرمجة
           </p>
         </div>
@@ -73,9 +73,9 @@ const Portfolio = () => {
               {/* Computer Screen Design */}
               <div className="relative w-full aspect-[4/3] mb-6">
                 {/* Screen Frame */}
-                <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 rounded-lg p-2">
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-2">
                   {/* Screen Content */}
-                  <div className="relative h-full bg-gradient-to-br from-white to-gray-50 rounded border border-gray-200 p-4">
+                  <div className="relative h-full bg-white rounded border border-gray-200 p-4">
                     {/* Screen Header */}
                     <div className="absolute top-2 left-2 flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
@@ -84,8 +84,8 @@ const Portfolio = () => {
                     </div>
                     {/* Project Content */}
                     <div className="h-full flex flex-col items-center justify-center text-center p-4">
-                      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-400 text-sm">{project.description}</p>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                      <p className="text-gray-600 text-sm">{project.description}</p>
                     </div>
                   </div>
                 </div>
