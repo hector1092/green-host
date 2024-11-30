@@ -133,8 +133,7 @@ const Portfolio = () => {
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               whileHover={{ 
-                                y: -10,
-                                scale: 1.05,
+                                y: 10, // تحريك الصورة للأسفل بمقدار 10 بكسل
                                 transition: { duration: 0.3, ease: "easeOut" }
                               }}
                             />
