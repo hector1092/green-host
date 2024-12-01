@@ -40,8 +40,8 @@ const Header = () => {
 
   const slides = [
     {
-      image: "/lovable-uploads/2.png",
-      secondaryImage: "/lovable-uploads/3.png",
+      image: "/lovable-uploads/3.png",
+      secondaryImage: "/lovable-uploads/2.png",
       title: "استضافة مخصصة وVIP",
       subtitle: "حلول فاخرة لاحتياجاتك الخاصة",
       description: "في Green & Host، نقدم لك أفضل خدمات الاستضافة المخصصة و الـ VIP التي تتميز بالأداء العالي، الأمان الفائق، والدعم المستمر، لتلبية كافة احتياجاتك التقنية من خلال حلول مصممة خصيصًا لك."
@@ -69,8 +69,8 @@ const Header = () => {
           backgroundImage: 'url(/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.8,
-          filter: 'brightness(1.2)'
+          opacity: 0.95,
+          filter: 'brightness(1.3)'
         }}
       />
 
@@ -87,7 +87,7 @@ const Header = () => {
               className="relative flex-[0_0_100%] min-w-0"
             >
               <div className="relative h-screen flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                 
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
@@ -110,13 +110,13 @@ const Header = () => {
 
                   {/* Text Content */}
                   <div className="w-full md:w-1/2 text-right space-y-6 animate-fade-in">
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary drop-shadow-lg">
                       {slide.title}
                     </h2>
-                    <h3 className="text-xl md:text-2xl text-primary-light font-semibold">
+                    <h3 className="text-xl md:text-2xl text-primary-light font-semibold drop-shadow-md">
                       {slide.subtitle}
                     </h3>
-                    <p className="text-lg md:text-xl text-white leading-relaxed">
+                    <p className="text-lg md:text-xl text-white leading-relaxed font-medium drop-shadow">
                       {slide.description}
                     </p>
                   </div>
