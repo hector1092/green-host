@@ -48,7 +48,7 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel": "^8.3.1",
-    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-autoplay": "^8.0.0-rc17",
     "embla-carousel-react": "^8.3.1",
     "framer-motion": "^11.12.0",
     "input-otp": "^1.2.4",

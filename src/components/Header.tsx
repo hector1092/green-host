@@ -10,9 +10,15 @@ const Header = () => {
     containScroll: "trimSnaps"
   };
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 4000, stopOnInteraction: false })
-  ]);
+  const autoplayOptions = {
+    delay: 4000,
+    stopOnInteraction: false
+  };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    options,
+    [Autoplay(autoplayOptions)]
+  );
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
