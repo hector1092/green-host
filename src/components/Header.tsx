@@ -90,12 +90,16 @@ const Header = () => {
                 
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
-                  <div className="w-full md:w-1/2 relative flex items-center justify-center">
+                  <div className="w-full md:w-1/2 relative flex items-center justify-center p-4">
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-2xl"
-                      style={{ maxHeight: '400px' }}
+                      className="w-full h-auto object-contain rounded-lg shadow-2xl"
+                      style={{ 
+                        maxWidth: '500px',
+                        minHeight: '300px',
+                        objectFit: 'contain'
+                      }}
                     />
                   </div>
 
