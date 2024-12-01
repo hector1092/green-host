@@ -40,13 +40,13 @@ const Header = () => {
 
   const slides = [
     {
-      image: "/lovable-uploads/bded1db6-de59-487f-859f-ff00b83374e2.png",
+      image: "/lovable-uploads/3.png",
       title: "استضافة مخصصة وVIP",
       subtitle: "حلول فاخرة لاحتياجاتك الخاصة",
       description: "في Green & Host، نقدم لك أفضل خدمات الاستضافة المخصصة و الـ VIP التي تتميز بالأداء العالي، الأمان الفائق، والدعم المستمر، لتلبية كافة احتياجاتك التقنية من خلال حلول مصممة خصيصًا لك."
     },
     {
-      image: "/lovable-uploads/e5611aa3-4a51-4993-b1f2-a404e8e2a91e.png",
+      image: "/lovable-uploads/1.png",
       title: "أداء عالي واستقرار دائم",
       subtitle: "خدمة متميزة على مدار الساعة",
       description: "نقدم لك استضافات مخصصة تتمتع بأداء عالي واستقرار دائم، كل ما عليك هو أن تتواصل معنا الآن، وسنقدم لك الحلول المثالية التي تضمن لك استضافة سريعة وآمنة مع دعم فني VIP على مدار الساعة."
@@ -90,16 +90,12 @@ const Header = () => {
                 
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
-                  <div className="w-full md:w-1/2 relative flex items-center justify-center p-4">
+                  <div className="w-full md:w-1/2 relative flex items-center justify-center">
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="w-full h-auto object-contain rounded-lg shadow-2xl"
-                      style={{ 
-                        maxWidth: '500px',
-                        minHeight: '300px',
-                        objectFit: 'contain'
-                      }}
+                      className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
+                      style={{ maxHeight: '300px' }}
                     />
                   </div>
 
