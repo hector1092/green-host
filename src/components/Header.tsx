@@ -1,18 +1,19 @@
 import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import useEmblaCarousel from 'embla-carousel-react';
+import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import AutoplayPlugin from "embla-carousel-autoplay";
 
 const Header = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     AutoplayPlugin({ delay: 4000, stopOnInteraction: true })
   ]);
+
+  const scrollPrev = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <header className="relative min-h-screen bg-white">
@@ -74,11 +75,11 @@ const Header = () => {
 
         {/* Navigation Buttons - Right Side */}
         <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4">
-          <button onClick={() => emblaRef.current?.scrollPrev()} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
+          <button onClick={scrollPrev} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
             <span className="sr-only">Previous slide</span>
             ←
           </button>
-          <button onClick={() => emblaRef.current?.scrollNext()} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
+          <button onClick={scrollNext} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
             <span className="sr-only">Next slide</span>
             →
           </button>
