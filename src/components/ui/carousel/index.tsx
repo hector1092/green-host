@@ -32,7 +32,7 @@ export const Carousel = React.forwardRef<
 
     const onSelect = React.useCallback(() => {
       if (!api) return
-      
+
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [api])
@@ -81,7 +81,8 @@ export const Carousel = React.forwardRef<
           carouselRef,
           api: api,
           opts,
-          orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+          orientation:
+            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
