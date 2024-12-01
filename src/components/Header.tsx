@@ -6,12 +6,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from 'embla-carousel-react';
+import AutoplayPlugin from "embla-carousel-autoplay";
 
 const Header = () => {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    AutoplayPlugin({ delay: 4000, stopOnInteraction: true })
+  ]);
 
   return (
     <header className="relative min-h-screen bg-white">
@@ -30,16 +31,9 @@ const Header = () => {
       </div>
 
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[plugin.current]}
-          className="w-full max-w-6xl mx-auto"
-        >
-          <CarouselContent>
-            <CarouselItem className="md:basis-full">
+        <div ref={emblaRef} className="w-full max-w-6xl mx-auto overflow-hidden">
+          <div className="flex">
+            <div className="flex-[0_0_100%]">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 bg-white/90 rounded-xl shadow-lg">
                 <div className="md:w-1/2 space-y-6 text-right">
                   <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">دعم فني متخصص على مدار الساعة طوال الأسبوع</h2>
@@ -55,9 +49,9 @@ const Header = () => {
                   />
                 </div>
               </div>
-            </CarouselItem>
+            </div>
 
-            <CarouselItem className="md:basis-full">
+            <div className="flex-[0_0_100%]">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 bg-white/90 rounded-xl shadow-lg">
                 <div className="md:w-1/2 space-y-6 text-right">
                   <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">استضافة مخصصة وفائقة التميز</h2>
@@ -74,15 +68,21 @@ const Header = () => {
                   />
                 </div>
               </div>
-            </CarouselItem>
-          </CarouselContent>
-
-          {/* Navigation Buttons - Right Side */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4">
-            <CarouselPrevious className="bg-primary hover:bg-primary-dark text-white border-none" />
-            <CarouselNext className="bg-primary hover:bg-primary-dark text-white border-none" />
+            </div>
           </div>
-        </Carousel>
+        </div>
+
+        {/* Navigation Buttons - Right Side */}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-4">
+          <button onClick={() => emblaRef.current?.scrollPrev()} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
+            <span className="sr-only">Previous slide</span>
+            ←
+          </button>
+          <button onClick={() => emblaRef.current?.scrollNext()} className="bg-primary hover:bg-primary-dark text-white border-none h-8 w-8 rounded-full flex items-center justify-center">
+            <span className="sr-only">Next slide</span>
+            →
+          </button>
+        </div>
       </div>
     </header>
   );
