@@ -87,9 +87,21 @@ const Header = () => {
               <div className="relative h-screen flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                 
-                <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-8">
+                <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+                  {/* Image Container */}
+                  {slide.image && (
+                    <div className="w-full md:w-1/2 relative flex items-center justify-center">
+                      <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
+                        style={{ maxHeight: '300px' }}
+                      />
+                    </div>
+                  )}
+
                   {/* Text Content */}
-                  <div className="w-full text-center space-y-6 animate-fade-in max-w-3xl">
+                  <div className={`w-full ${slide.image ? 'md:w-1/2' : ''} text-right space-y-6 animate-fade-in`}>
                     <h2 className="text-3xl md:text-5xl font-bold text-primary drop-shadow-lg">
                       {slide.title}
                     </h2>
