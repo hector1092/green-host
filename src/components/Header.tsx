@@ -73,16 +73,22 @@ const Header = () => {
               key={index}
               className="relative flex-[0_0_100%] min-w-0"
             >
-              <div className="relative h-screen">
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-75"
-                />
+              <div className="relative h-screen flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent" />
                 
-                <div className="relative h-full flex items-center justify-center px-4 md:px-8">
-                  <div className="text-center max-w-4xl mx-auto space-y-6 animate-fade-in">
+                <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+                  {/* Image Container */}
+                  <div className="w-full md:w-1/2 relative">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-2xl"
+                      style={{ maxHeight: '400px' }}
+                    />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="w-full md:w-1/2 text-right space-y-6 animate-fade-in">
                     <h2 className="text-3xl md:text-5xl font-bold text-primary">
                       {slide.title}
                     </h2>
