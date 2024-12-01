@@ -29,7 +29,7 @@ const Header = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png')",
+          backgroundImage: "url('/background.svg')",
           backgroundBlendMode: "normal",
           backgroundColor: "rgba(255, 255, 255, 0.95)"
         }}
@@ -56,6 +56,10 @@ const Header = () => {
                     src="/lovable-uploads/2.png" 
                     alt="دعم فني متخصص"
                     className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e);
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
                   />
                 </div>
               </div>
@@ -75,6 +79,10 @@ const Header = () => {
                     src="/lovable-uploads/1.png" 
                     alt="استضافة مخصصة"
                     className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e);
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
                   />
                 </div>
               </div>
