@@ -11,7 +11,7 @@ const AboutUsDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-2 bg-gradient-to-r from-primary via-primary-light to-primary text-secondary px-6 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
+        <button className="flex items-center gap-2 bg-primary text-secondary px-6 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
           <Info className="w-5 h-5" />
           من نحن
         </button>
@@ -28,14 +28,14 @@ const AboutUsDialog = () => {
             بفريقنا المبدع وتقنياتنا المتطورة، نقدم لك تجربة استضافة تضيف لموقعك القوة، السرعة، والاستقرار.
           </p>
 
-          <div className="bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur-sm">
+          <div className="bg-secondary p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-4">رؤيتنا: نُعيد تعريف استضافة المواقع.</h3>
             <p className="leading-relaxed text-white">
               في عالم مليء بالتحديات التقنية، نسعى لنكون الحل الأمثل لأصحاب المواقع الطموحين. هدفنا هو تقديم خدمات تجعل من السهل على الجميع الانطلاق نحو النجاح في فضاء الإنترنت.
             </p>
           </div>
 
-          <div className="bg-white/10 p-6 rounded-xl shadow-md backdrop-blur-sm">
+          <div className="bg-secondary p-6 rounded-xl shadow-md">
             <h3 className="text-2xl font-bold text-primary mb-4">قيمنا الأساسية:</h3>
             <ul className="list-none space-y-4">
               <li className="flex items-center gap-2 text-white">
@@ -53,31 +53,31 @@ const AboutUsDialog = () => {
             </ul>
           </div>
 
-          <div className="bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur-sm">
+          <div className="bg-secondary p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-4">ماذا نقدم؟</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <li className="bg-white/5 p-4 rounded-lg shadow backdrop-blur-sm flex items-start gap-3">
+              <li className="bg-secondary p-4 rounded-lg shadow flex items-start gap-3">
                 <span className="w-3 h-3 bg-primary rounded-full mt-2"></span>
                 <div>
                   <h4 className="font-bold text-primary mb-1">استضافة فائقة السرعة</h4>
                   <p className="text-white">خوادم حديثة مهيأة لتقديم أفضل أداء.</p>
                 </div>
               </li>
-              <li className="bg-white/5 p-4 rounded-lg shadow backdrop-blur-sm flex items-start gap-3">
+              <li className="bg-secondary p-4 rounded-lg shadow flex items-start gap-3">
                 <span className="w-3 h-3 bg-primary rounded-full mt-2"></span>
                 <div>
                   <h4 className="font-bold text-primary mb-1">حماية متقدمة</h4>
                   <p className="text-white">أنظمة أمان ذكية لضمان تجربة خالية من المخاطر.</p>
                 </div>
               </li>
-              <li className="bg-white/5 p-4 rounded-lg shadow backdrop-blur-sm flex items-start gap-3">
+              <li className="bg-secondary p-4 rounded-lg shadow flex items-start gap-3">
                 <span className="w-3 h-3 bg-primary rounded-full mt-2"></span>
                 <div>
                   <h4 className="font-bold text-primary mb-1">دعم مستمر</h4>
                   <p className="text-white">فريق دعم فني متاح على مدار الساعة.</p>
                 </div>
               </li>
-              <li className="bg-white/5 p-4 rounded-lg shadow backdrop-blur-sm flex items-start gap-3">
+              <li className="bg-secondary p-4 rounded-lg shadow flex items-start gap-3">
                 <span className="w-3 h-3 bg-primary rounded-full mt-2"></span>
                 <div>
                   <h4 className="font-bold text-primary mb-1">حلول مخصصة</h4>
@@ -87,7 +87,7 @@ const AboutUsDialog = () => {
             </ul>
           </div>
 
-          <div className="bg-white/10 p-6 rounded-xl shadow-md backdrop-blur-sm">
+          <div className="bg-secondary p-6 rounded-xl shadow-md">
             <h3 className="text-2xl font-bold text-primary mb-4">لماذا Green Host؟</h3>
             <p className="leading-relaxed text-white">
               لأننا نؤمن أن التكنولوجيا المتطورة وحدها لا تكفي، بل يجب أن تكون مدعومة بخدمة إنسانية حقيقية.
@@ -95,7 +95,7 @@ const AboutUsDialog = () => {
             </p>
           </div>
 
-          <p className="text-xl font-bold text-primary text-center py-4 bg-white/5 backdrop-blur-sm rounded-xl">
+          <p className="text-xl font-bold text-primary text-center py-4 bg-secondary rounded-xl">
             ابدأ اليوم رحلتك الرقمية معنا – لأن موقعك يستحق الأفضل.
           </p>
         </div>
