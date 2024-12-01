@@ -1,17 +1,16 @@
 import React from 'react';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from "embla-carousel-autoplay";
-import type { EmblaPluginType } from 'embla-carousel'
 
 const Header = () => {
-  const options: EmblaOptionsType = {
+  const options = {
     loop: true,
     align: 'start',
     containScroll: 'trimSnaps'
   };
 
   const autoplayPlugin = React.useMemo(
-    () => Autoplay({ delay: 4000, stopOnInteraction: false }) as EmblaPluginType,
+    () => Autoplay({ delay: 4000, stopOnInteraction: false }),
     []
   );
   
