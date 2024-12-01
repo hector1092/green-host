@@ -41,7 +41,6 @@ const Header = () => {
   const slides = [
     {
       image: "/lovable-uploads/3.png",
-      secondaryImage: "/lovable-uploads/2.png",
       title: "استضافة مخصصة وVIP",
       subtitle: "حلول فاخرة لاحتياجاتك الخاصة",
       description: "في Green & Host، نقدم لك أفضل خدمات الاستضافة المخصصة و الـ VIP التي تتميز بالأداء العالي، الأمان الفائق، والدعم المستمر، لتلبية كافة احتياجاتك التقنية من خلال حلول مصممة خصيصًا لك."
@@ -91,21 +90,13 @@ const Header = () => {
                 
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
-                  <div className="w-full md:w-1/2 relative flex items-center justify-center gap-4">
+                  <div className="w-full md:w-1/2 relative flex items-center justify-center">
                     <img
                       src={slide.image}
                       alt={slide.title}
                       className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
                       style={{ maxHeight: '300px' }}
                     />
-                    {slide.secondaryImage && (
-                      <img
-                        src={slide.secondaryImage}
-                        alt="Secondary Image"
-                        className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
-                        style={{ maxHeight: '300px' }}
-                      />
-                    )}
                   </div>
 
                   {/* Text Content */}
