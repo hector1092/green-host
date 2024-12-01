@@ -1,20 +1,18 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from "embla-carousel-autoplay";
+import { EmblaOptionsType } from 'embla-carousel';
 
 const Header = () => {
-  const options = {
+  const options: EmblaOptionsType = {
     loop: true,
-    align: "center" as const,
-    containScroll: "trimSnaps" as const
+    align: "center",
+    containScroll: "trimSnaps"
   };
 
-  const autoplayPlugin = React.useMemo(
-    () => Autoplay({ delay: 4000, stopOnInteraction: false }),
-    []
-  );
-  
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplayPlugin]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  ]);
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
