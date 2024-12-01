@@ -11,8 +11,8 @@ const AboutUsDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-2 bg-primary text-secondary px-6 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
-          <Info className="w-5 h-5" />
+        <button className="flex items-center gap-1.5 bg-primary text-secondary px-4 py-2 rounded-full font-medium text-base hover:scale-105 transition-all duration-300 shadow-md hover:shadow-primary/20">
+          <Info className="w-4 h-4" />
           من نحن
         </button>
       </DialogTrigger>
