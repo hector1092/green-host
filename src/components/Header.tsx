@@ -26,13 +26,12 @@ const Header = () => {
   }, [emblaApi]);
 
   return (
-    <header className="relative min-h-screen">
+    <header className="relative min-h-screen bg-secondary">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
         style={{
           backgroundImage: "url('/background.svg')",
-          backgroundBlendMode: "normal",
-          backgroundColor: "rgba(26, 31, 44, 0.95)"
+          backgroundBlendMode: "overlay"
         }}
       />
 
@@ -41,7 +40,7 @@ const Header = () => {
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
       </div>
 
-      <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
+      <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative z-10">
         <div className="embla w-full max-w-6xl mx-auto overflow-hidden" ref={emblaRef}>
           <div className="embla__container flex">
             <div className="embla__slide flex-[0_0_100%]">
@@ -57,6 +56,11 @@ const Header = () => {
                     src="/lovable-uploads/2.png" 
                     alt="دعم فني متخصص"
                     className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      console.error('Image failed to load:', target.src);
+                      target.src = '/placeholder.svg';
+                    }}
                   />
                 </div>
               </div>
@@ -76,6 +80,11 @@ const Header = () => {
                     src="/lovable-uploads/1.png" 
                     alt="استضافة مخصصة"
                     className="w-full h-auto rounded-lg shadow-xl animate-float object-contain max-h-[400px]"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      console.error('Image failed to load:', target.src);
+                      target.src = '/placeholder.svg';
+                    }}
                   />
                 </div>
               </div>
