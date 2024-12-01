@@ -41,6 +41,7 @@ const Header = () => {
   const slides = [
     {
       image: "/lovable-uploads/3.png",
+      secondaryImage: "/lovable-uploads/2.png",
       title: "استضافة مخصصة وVIP",
       subtitle: "حلول فاخرة لاحتياجاتك الخاصة",
       description: "في Green & Host، نقدم لك أفضل خدمات الاستضافة المخصصة و الـ VIP التي تتميز بالأداء العالي، الأمان الفائق، والدعم المستمر، لتلبية كافة احتياجاتك التقنية من خلال حلول مصممة خصيصًا لك."
@@ -61,12 +62,23 @@ const Header = () => {
 
   return (
     <header className="relative min-h-screen bg-secondary/95">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.15
+        }}
+      />
+
       {/* Company Name */}
       <div className="absolute top-4 left-4 z-10">
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
       </div>
 
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden relative z-10" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
             <div
@@ -78,13 +90,21 @@ const Header = () => {
                 
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
-                  <div className="w-full md:w-1/2 relative">
+                  <div className="w-full md:w-1/2 relative flex items-center justify-center gap-4">
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-2xl"
-                      style={{ maxHeight: '400px' }}
+                      className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
+                      style={{ maxHeight: '300px' }}
                     />
+                    {slide.secondaryImage && (
+                      <img
+                        src={slide.secondaryImage}
+                        alt="Secondary Image"
+                        className="w-full max-w-xs mx-auto h-auto object-contain rounded-lg shadow-2xl"
+                        style={{ maxHeight: '300px' }}
+                      />
+                    )}
                   </div>
 
                   {/* Text Content */}
