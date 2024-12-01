@@ -3,9 +3,10 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from "embla-carousel-autoplay";
 
 const Header = () => {
-  const autoplayPlugin = React.useMemo(() => 
-    Autoplay({ delay: 4000, stopOnInteraction: false })
-  , []);
+  const autoplayOptions = {
+    delay: 4000,
+    stopOnInteraction: false,
+  };
   
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
@@ -13,7 +14,7 @@ const Header = () => {
       align: 'start',
       containScroll: 'trimSnaps'
     },
-    [autoplayPlugin]
+    [Autoplay(autoplayOptions)]
   );
 
   const scrollPrev = React.useCallback(() => {
