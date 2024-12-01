@@ -1,11 +1,12 @@
 import React from 'react';
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
-import AutoplayPlugin from "embla-carousel-autoplay";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from "embla-carousel-autoplay";
 
 const Header = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    AutoplayPlugin({ delay: 4000, stopOnInteraction: true })
-  ]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true }, 
+    [Autoplay({ delay: 4000, stopOnInteraction: true })]
+  );
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
