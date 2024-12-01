@@ -40,7 +40,7 @@ const Header = () => {
 
   const slides = [
     {
-      image: "/lovable-uploads/3.png",
+      image: "/lovable-uploads/e5611aa3-4a51-4993-b1f2-a404e8e2a91e.png",
       title: "استضافة مخصصة وVIP",
       subtitle: "حلول فاخرة لاحتياجاتك الخاصة",
       description: "في Green & Host، نقدم لك أفضل خدمات الاستضافة المخصصة و الـ VIP التي تتميز بالأداء العالي، الأمان الفائق، والدعم المستمر، لتلبية كافة احتياجاتك التقنية من خلال حلول مصممة خصيصًا لك."
