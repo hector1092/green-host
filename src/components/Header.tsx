@@ -3,18 +3,29 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from "embla-carousel-autoplay";
 
 const Header = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true }, 
-    [Autoplay({ delay: 4000, stopOnInteraction: true })]
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: 'start',
+      containScroll: 'trimSnaps'
+    }
   );
 
   const scrollPrev = React.useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+    const emblaNode = document.querySelector('.embla__viewport');
+    if (emblaNode) {
+      const emblaApi = (emblaNode as any).__embla;
+      if (emblaApi) emblaApi.scrollPrev();
+    }
+  }, []);
 
   const scrollNext = React.useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+    const emblaNode = document.querySelector('.embla__viewport');
+    if (emblaNode) {
+      const emblaApi = (emblaNode as any).__embla;
+      if (emblaApi) emblaApi.scrollNext();
+    }
+  }, []);
 
   return (
     <header className="relative min-h-screen bg-white">
@@ -27,15 +38,15 @@ const Header = () => {
         }}
       />
 
-      {/* Company Name - Left Side */}
+      {/* Company Name - Right Side */}
       <div className="absolute top-4 left-4 z-10">
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
       </div>
 
       <div className="container mx-auto px-4 pt-24 min-h-screen flex flex-col justify-center items-center relative">
-        <div ref={emblaRef} className="w-full max-w-6xl mx-auto overflow-hidden">
-          <div className="flex">
-            <div className="flex-[0_0_100%]">
+        <div className="embla w-full max-w-6xl mx-auto overflow-hidden" ref={emblaRef}>
+          <div className="embla__container flex">
+            <div className="embla__slide flex-[0_0_100%]">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 bg-white/90 rounded-xl shadow-lg">
                 <div className="md:w-1/2 space-y-6 text-right">
                   <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">دعم فني متخصص على مدار الساعة طوال الأسبوع</h2>
@@ -53,7 +64,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="flex-[0_0_100%]">
+            <div className="embla__slide flex-[0_0_100%]">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 bg-white/90 rounded-xl shadow-lg">
                 <div className="md:w-1/2 space-y-6 text-right">
                   <h2 className="text-4xl md:text-5xl font-bold text-primary font-poppins">استضافة مخصصة وفائقة التميز</h2>
