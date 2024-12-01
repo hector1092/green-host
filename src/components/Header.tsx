@@ -3,29 +3,22 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from "embla-carousel-autoplay";
 
 const Header = () => {
-  const [emblaRef] = useEmblaCarousel(
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true,
       align: 'start',
       containScroll: 'trimSnaps'
-    }
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
 
   const scrollPrev = React.useCallback(() => {
-    const emblaNode = document.querySelector('.embla__viewport');
-    if (emblaNode) {
-      const emblaApi = (emblaNode as any).__embla;
-      if (emblaApi) emblaApi.scrollPrev();
-    }
-  }, []);
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
   const scrollNext = React.useCallback(() => {
-    const emblaNode = document.querySelector('.embla__viewport');
-    if (emblaNode) {
-      const emblaApi = (emblaNode as any).__embla;
-      if (emblaApi) emblaApi.scrollNext();
-    }
-  }, []);
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <header className="relative min-h-screen bg-white">
