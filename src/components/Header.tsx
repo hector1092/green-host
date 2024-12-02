@@ -59,7 +59,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="relative min-h-screen bg-secondary">
+    <header className="relative min-h-screen">
       {/* Company Name */}
       <div className="absolute top-4 left-4 z-10">
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
