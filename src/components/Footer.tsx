@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-br from-secondary via-secondary/80 to-secondary/60 backdrop-blur-lg py-12 sm:py-16 text-center">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="space-y-6 sm:space-y-8">
-          <h3 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-text-flow mb-4 sm:mb-6">
+          <h3 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent animate-text-flow mb-4 sm:mb-6">
             Green OF Host
           </h3>
           <div className="space-y-4">
