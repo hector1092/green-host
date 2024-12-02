@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-secondary via-secondary-dark to-secondary text-white overflow-x-hidden;
+    @apply bg-[url('/background.svg')] bg-cover bg-center bg-fixed text-white overflow-x-hidden;
   }
 }
 
