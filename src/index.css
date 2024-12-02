@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-[url('/lovable-uploads/4b2c45ba-b4f6-40f0-92ff-4fe66e30922f.png')] bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-white overflow-x-hidden;
+    @apply bg-[url('/lovable-uploads/78.png')] bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-white overflow-x-hidden;
   }
 }
 
