@@ -85,8 +85,6 @@ const Header = () => {
               className="relative flex-[0_0_100%] min-w-0"
             >
               <div className="relative h-screen flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
-                
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* Image Container */}
                   {slide.image && (
