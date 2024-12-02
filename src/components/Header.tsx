@@ -62,7 +62,7 @@ const Header = () => {
     <header className="relative min-h-screen">
       {/* Company Name */}
       <div className="absolute top-4 left-4 z-10">
-        <h1 className="text-3xl font-bold text-primary">Green & Host</h1>
+        <h1 className="text-4xl font-bold text-primary">Green OF Host</h1>
       </div>
 
       <div className="overflow-hidden relative z-10" ref={emblaRef}>

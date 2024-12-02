@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="space-y-6 sm:space-y-8">
           <h3 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-text-flow mb-4 sm:mb-6">
-            Green Host
+            Green OF Host
           </h3>
           <div className="space-y-4">
             <p className="text-xl sm:text-2xl font-semibold text-white">جاهز لتحقيق أحلامك الرقمية؟</p>

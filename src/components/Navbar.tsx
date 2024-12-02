@@ -10,7 +10,7 @@ const Navbar = () => {
           {/* Company Name - Left Side */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-primary">
-              Green & Host
+              Green OF Host
             </h1>
           </div>
 
