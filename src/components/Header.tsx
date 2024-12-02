@@ -60,18 +60,6 @@ const Header = () => {
 
   return (
     <header className="relative min-h-screen bg-secondary">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/a902a542-6e79-4b8a-9b1f-fc342e0c73dd.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.95,
-          filter: 'brightness(1.3)'
-        }}
-      />
-
       {/* Company Name */}
       <div className="absolute top-4 left-4 z-10">
         <h1 className="text-3xl font-bold text-primary">Green & Host</h1>

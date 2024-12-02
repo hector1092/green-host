@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply min-h-screen text-white overflow-x-hidden relative;
+    @apply min-h-screen text-white overflow-x-hidden relative bg-secondary;
   }
 }
 
