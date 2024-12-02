@@ -87,7 +87,7 @@ const Header = () => {
                   )}
 
                   {/* Text Content */}
-                  <div className={`w-full ${slide.image ? 'md:w-1/2' : ''} text-right space-y-6 animate-fade-in`}>
+                  <div className={`w-full ${slide.image ? 'md:w-1/2' : ''} text-right space-y-6 animate-fade-in bg-black/50 p-6 rounded-xl backdrop-blur-sm`}>
                     <h2 className="text-3xl md:text-5xl font-bold text-primary drop-shadow-lg">
                       {slide.title}
                     </h2>
