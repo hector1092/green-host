@@ -11,7 +11,12 @@
   }
 
   body {
-    @apply min-h-screen text-white overflow-x-hidden;
+    @apply min-h-screen text-white overflow-x-hidden relative;
+  }
+
+  body::before {
+    content: '';
+    @apply fixed inset-0 bg-[url('/lovable-uploads/78.png')] bg-cover bg-center bg-no-repeat -z-10;
   }
 }
 
