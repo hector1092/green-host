@@ -12,11 +12,20 @@
 
   body {
     @apply min-h-screen text-white overflow-x-hidden relative;
-    background-image: url('/lovable-uploads/78.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/lovable-uploads/78.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-section {
+  @apply bg-white min-h-screen w-full relative z-10;
 }
 
 @layer components {
@@ -43,17 +52,17 @@
   }
 }
 
-.hero-circle {
-  @apply absolute rounded-full bg-primary/20 blur-3xl;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+@media (max-width: 640px) {
+  .hero-section {
+    height: 60vh;
+  }
 }
 
 .glass-card {

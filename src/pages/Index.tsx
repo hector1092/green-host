@@ -8,11 +8,15 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen relative text-right overflow-hidden" dir="rtl">
-      <Header />
-      <HostingPlans />
-      <PaymentMethods />
-      <Ratings />
-      <Footer />
+      <div className="hero-section">
+        <Header />
+      </div>
+      <div className="content-section">
+        <HostingPlans />
+        <PaymentMethods />
+        <Ratings />
+        <Footer />
+      </div>
     </div>
   );
 };
